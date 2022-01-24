@@ -361,7 +361,7 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div class="splide" data-splide='{"type":"slide","perPage":3, "pagination":false, "gap" : 10, "rewind": true}'>
+                <div class="splide">
                     <div class="splide__arrows glide__arrows">
                             <button class="splide__arrow splide__arrow--prev glide__arrow glide__arrow--left">
                                 Prev

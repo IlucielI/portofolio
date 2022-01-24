@@ -6,7 +6,7 @@ $(".card-img-top").tilt({
 
 //glide init
 document.addEventListener("DOMContentLoaded", function () {
-    const sliders = document.querySelectorAll(".glide");
+    const gliders = document.querySelectorAll(".glide");
     const conf = {
         type: "slider",
         gap: 10,
@@ -22,10 +22,29 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         },
     };
-    sliders.forEach((item) => {
+    gliders.forEach((item) => {
         new Glide(item, conf).mount();
     });
-    new Splide(".splide").mount();
+    const splider = document.querySelectorAll(".splide");
+    const config = {
+        type: "slide",
+        gap: 10,
+        rewind: true,
+        startAt: 0,
+        perPage: 3,
+        pagination: false,
+        breakpoints: {
+            768: {
+                perPage: 2,
+            },
+            576: {
+                perPage: 1,
+            },
+        },
+    };
+    splider.forEach((item) => {
+        new Splide(item, config).mount();
+    });
 });
 
 $(document).scroll(function () {
